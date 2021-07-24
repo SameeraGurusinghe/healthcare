@@ -1,3 +1,8 @@
+<!-- ***** Header and library Area Start ***** -->
+@extends('layouts.mainlibrariesup')
+@extends('layouts.header')
+<!-- ***** Header and library Area End ***** -->
+<br><br><br><br>
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -58,3 +63,7 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+
+<!--footer-->
+@extends('layouts.footer')
+@extends('layouts.mainlibrariesdown')

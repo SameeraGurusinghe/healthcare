@@ -22,6 +22,12 @@ Route::get("/",[HomeController::class,"index"]);
 
 Route::get("/redirects",[HomeController::class,"redirects"]);
 
+Route::get("/about",[HomeController::class,"about"]);
+
+Route::get("/contact",[HomeController::class,"contact"]);
+
+Route::get("/pharmacy",[HomeController::class,"pharmacy"]);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
