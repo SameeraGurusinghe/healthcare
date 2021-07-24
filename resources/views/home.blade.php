@@ -1,8 +1,10 @@
 <!-- ***** Header and library Area Start ***** -->
 @extends('layouts.mainlibrariesup')
-@extends('layouts.header')
 <!-- ***** Header and library Area End ***** -->
+<title>Home</title>
 
+<body>
+@extends('layouts.header')
     <!-- ***** Main Banner Area Start ***** -->
     <div id="top">
         <div class="container-fluid">
@@ -121,3 +123,6 @@
 <!--footer-->
 @extends('layouts.footer')
 @extends('layouts.mainlibrariesdown')
+
+</body>
+</html>

@@ -1,8 +1,10 @@
 <!-- ***** Header and library Area Start ***** -->
 @extends('layouts.mainlibrariesup')
-@extends('layouts.header')
 <!-- ***** Header and library Area End ***** -->
+<title>Contact Us</title>
 
+<body>
+@extends('layouts.header')
     <!-- ***** Reservation Us Area Starts ***** -->
     <section class="section" id="reservation">
         <div class="container">
@@ -115,3 +117,6 @@
 <!--footer-->
 @extends('layouts.footer')
 @extends('layouts.mainlibrariesdown')
+
+</body>
+</html>

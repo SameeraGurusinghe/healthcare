@@ -1,8 +1,10 @@
 <!-- ***** Header and library Area Start ***** -->
 @extends('layouts.mainlibrariesup')
-@extends('layouts.header')
 <!-- ***** Header and library Area End ***** -->
+<title>Pharmacy</title>
 
+<body>
+@extends('layouts.header')
     <!-- ***** Chefs Area Starts ***** -->
     <section class="section" id="chefs">
         <div class="container">
@@ -74,3 +76,6 @@
 <!--footer-->
 @extends('layouts.footer')
 @extends('layouts.mainlibrariesdown')
+
+</body>
+</html>

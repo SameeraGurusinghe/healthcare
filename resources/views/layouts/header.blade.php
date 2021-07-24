@@ -21,11 +21,10 @@
                             @if (Route::has('login'))
                             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
+                            <li><a href="{{ url('redirects') }}" class="text-sm text-gray-700 underline">Dashboard</a></li>
                             <li>
-                            <x-app-layout>
-                            </x-app-layout>
+                            <x-app-layout></x-app-layout>
                             </li>
-                            <!--<li><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a></li>-->
                             @else
                             <li><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a></li>
 
@@ -36,11 +35,10 @@
                             </div>
                             @endif
                             </li>
-                        
                         </ul>        
                         <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
         </div>
-    </header>
+</header>
