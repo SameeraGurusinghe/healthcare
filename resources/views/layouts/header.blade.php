@@ -5,8 +5,8 @@
                     <nav class="main-nav">
 
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/klassy-logo.png">
+                        <a href="" class="logo">
+                            <img src="assets/images/headerlogo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
 

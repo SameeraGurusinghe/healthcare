@@ -13,18 +13,32 @@
                     <div class="left-text-content">
                         <div class="section-heading">
                             <h6>About Us</h6>
-                            <h2>We Leave A Delicious Memory For You</h2>
+                            <h2>Trust . Convenience . Care</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <p><b>E-Medi-Order Pharmacy Limited</b> a 100% subsidiary of Sunshine Healthcare is one of the 1st branded retail
+                            Pharmaceutical Chains in Sri Lanka that has entered the market with a view of creating a difference in the
+                            retail pharmaceutical trade. Headed by a team of professionals, Healthguard has introduced an innovative
+                            concept centered on superior customer care, latest technology in data management, a wide product
+                            assortment, affordable prices and a host of value additions.</p>
+                        
                         <div class="row">
-                            <div class="col-4">
-                                <img src="assets/images/about-thumb-01.jpg" alt="">
+                            <div class="col-12">
+                                <img src="assets/images/how.jpg" alt="">
                             </div>
-                            <div class="col-4">
-                                <img src="assets/images/about-thumb-02.jpg" alt="">
+                        </div><br><br><br>
+
+                        <div class="row">
+                            <div class="col-3 text-center bg-info">
+                                <h4>On Time Delivery</h4>
                             </div>
-                            <div class="col-4">
-                                <img src="assets/images/about-thumb-03.jpg" alt="">
+                            <div class="col-3 text-center bg-info">
+                                <h4>24-7 Service</h4>
+                            </div>
+                            <div class="col-3 text-center bg-info">
+                                <h4>Best Price</h4>
+                            </div>
+                            <div class="col-3 text-center bg-info">
+                                <h4>Home Delivery</h4>
                             </div>
                         </div>
                     </div>

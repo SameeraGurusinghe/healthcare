@@ -12,10 +12,13 @@
                 <div class="col-lg-4">
                     <div class="left-content">
                         <div class="inner-content">
-                            <h4>KlassyCafe</h4>
-                            <h6>THE BEST EXPERIENCE</h6>
+                            <span>01. Upload prescription</span><br>
+                            <span>02. Confirm the order</span><br>
+                            <span>03. Get it delivered to your doorstep</span>
+                            <h4>E-Medi-Order</h4>
+                            <h6>Trust . Convenience . Care</h6>
                             <div class="main-white-button scroll-to-section">
-                                <a href="#reservation">Make A Reservation</a>
+                                <a href="#reservation">Upload Your Prescription</a>
                             </div>
                         </div>
                     </div>
@@ -26,21 +29,21 @@
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-01.jpg" alt="">
+                                <img src="assets/images/slide-03.png" alt="">
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-02.jpg" alt="">
+                                <img src="assets/images/slide-02.png" alt="">
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-03.jpg" alt="">
+                                <img src="assets/images/slide-01.png" alt="">
                             </div>
                           </div>
                           <!-- // Item -->
@@ -59,7 +62,7 @@
                 <div class="col-lg-4 offset-lg-4 text-center">
                     <div class="section-heading">
                         <h6>Our Chefs</h6>
-                        <h2>We offer the best ingredients for you</h2>
+                        <h2>We offer the best services for you</h2>
                     </div>
                 </div>
             </div>
@@ -69,15 +72,12 @@
                         <div class="thumb">
                             <div class="overlay"></div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-check-square"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-01.jpg" alt="Chef #1">
+                            <img src="assets/images/offer01.png" alt="Chef #1">
                         </div>
                         <div class="down-content">
-                            <h4>Randy Walker</h4>
-                            <span>Pastry Chef</span>
+                            <h4>On time delivery</h4>
                         </div>
                     </div>
                 </div>
@@ -86,15 +86,12 @@
                         <div class="thumb">
                             <div class="overlay"></div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fa fa-check-square"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-02.jpg" alt="Chef #2">
+                            <img src="assets/images/offer02.png" alt="Chef #2">
                         </div>
                         <div class="down-content">
-                            <h4>David Martin</h4>
-                            <span>Cookie Chef</span>
+                            <h4>Best price</h4>
                         </div>
                     </div>
                 </div>
@@ -103,15 +100,12 @@
                         <div class="thumb">
                             <div class="overlay"></div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa fa-check-square"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-03.jpg" alt="Chef #3">
+                            <img src="assets/images/offer03.png" alt="Chef #3">
                         </div>
                         <div class="down-content">
-                            <h4>Peter Perkson</h4>
-                            <span>Pancake Chef</span>
+                            <h4>24-7 service</h4>
                         </div>
                     </div>
                 </div>

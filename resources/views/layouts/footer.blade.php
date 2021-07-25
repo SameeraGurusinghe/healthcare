@@ -1,7 +1,7 @@
 <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-xs-12">
+                <div class="col-lg-5 col-xs-12">
                     <div class="right-text-content">
                             <ul class="social-icons">
                                 <span style="color:yellow;">Social Media: </span>
@@ -12,8 +12,9 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
+                    <img src="assets/images/headerlogo.png">
                 </div>
-                <div class="col-lg-6 col-xs-12">
+                <div class="col-lg-5 col-xs-12">
                     <div class="left-text-content">
                         <p>©2021 Medicine Ordering & Healthcare Service System
                         
