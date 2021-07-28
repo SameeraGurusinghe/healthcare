@@ -2,6 +2,7 @@
 <html lang="en">
 
   <head>
+      <base href="/public">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Update Contact</title>
+    <title>Update Contact Info</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -42,10 +43,9 @@
 			      <div class="table-responsive">
 					  <h5 style="text-align: center;">UPDATE CONTACT INFORMATION</h5><br>
 
-                  <form action="" method="post">
+                @foreach($contact as $data)
+                  <form action="{{url('/finalcontactupdate',$data->id)}}" method="POST">
                     {{csrf_field()}}
-
-                    @foreach($contactdata as $data)
 
                       <div class="form-group row">
                         <label class="col-lg-2 col-form-label form-control-label">Telephone</label>
@@ -76,13 +76,14 @@
                           </div>
                       </div><br>
 
-					            <div class="p-2">
-					              <a href="{{url('/updateview',$data->id)}}" class="btn btn-success btn-sm" style="width: 80px; float: right;">UPDATE</a>
+					    <div class="p-2">
+					    <button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;">UPDATE</button>
                         <button type="reset" class="btn btn-warning btn-sm" style="width: 80px; float: right;">RESET</button>
 					            </div>
-                      @endforeach
+                     
 
 					        </form>
+                            @endforeach
 					</div>
 					</div>
         </div>

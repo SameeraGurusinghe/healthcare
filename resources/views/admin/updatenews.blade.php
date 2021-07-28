@@ -42,20 +42,25 @@
         <div class="card-body">
           <h4 style="text-align: center;"><b>POST A NEWS</b></h4>
 				
-          <form action="controller.php" method="POST">
+          <form action="{{url('/postnews')}}" method="POST" enctype="multipart/form-data">
+          @csrf
 
             <div class="p-2">           
-                <input type="text" style="background-color:#181618;" name="tit" class="form-control" id="Write Announcement Title"  placeholder="News Title" required>
-			</div>
+                <input type="text" style="background-color:#181618;" name="title" class="form-control"  placeholder="News Title" required>
+			      </div>
                           
             <div class="p-2">
-                <textarea type="text" style="background-color:#181618;" name="annou" class="form-control" id="Write Description"  placeholder="Description" required></textarea>
+                <textarea type="text" style="background-color:#181618;" name="newsdesciption" class="form-control" placeholder="News Description" required></textarea>
             </div>
+
+            <div class="p-2">           
+                <input type="file" style="background-color:#181618;" name="image" class="form-control" placeholder="Image" required>
+			      </div>
 									
-			<div class="p-2">
-                <!--<button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;" name="addnews">PUBLISH</button>-->
-				<button type="button" class="btn btn-success btn-sm" style="float: right;" data-bs-toggle="modal" data-bs-target="#staticBackdropForNewsFeedback">PUBLISH</button>
-				<button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>									    
+			      <div class="p-2">
+            <!--<button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;" name="addnews">PUBLISH</button>-->
+				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">PUBLISH</button>
+				    <button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>									    
             </div>
           
             </form>

@@ -33,6 +33,28 @@ Route::get("/updatecontact",[AdminController::class,"updatecontact"]);
 
 Route::get("/updatenews",[AdminController::class,"updatenews"]);
 
+Route::post("/postnews",[AdminController::class,"postnews"]);
+
+//Route::post("/contactupdate",[AdminController::class,"contactup"]);
+
+Route::get("/updateview/{id}",[AdminController::class,"updateview"]);
+
+Route::post("/finalcontactupdate/{id}",[AdminController::class,"finalcontactupdate"]);
+
+
+
+//Contact Details Save
+//Route::post("/saveContactData",[AdminController::class,"saveContactData"]);
+/*
+Route::get('/updatecontact', function () {
+$contactdata = App\Models\Contactus::all(); 
+    return view('admin.adminhome')->with('updatecontact',$contactdata);
+});*/
+
+//Route::get("/updatecon/{id}",[AdminController::class,"updatecon"]);
+
+//Route::post("/conupdate/{id}",[AdminController::class,"update"]);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
