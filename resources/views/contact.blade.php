@@ -16,22 +16,43 @@
                             <h2>Here You Can Get Customer Service Support</h2>
                         </div>
                         <p>Feel free to contact us</p>
+
+                        @foreach($contactdata as $data)
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="phone">
                                     <i class="fa fa-phone"></i>
-                                    <h4>Phone Numbers</h4>
-                                    <span><a href="#">+94 76 447 7888</a><br><a href="#">+94 76 447 7999</a></span>
+                                    <h4>Phone Number</h4>
+                                    <span><a href="tel: {{$data->telephone}}">{{$data->telephone}}</a></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="message">
                                     <i class="fa fa-envelope"></i>
-                                    <h4>Emails</h4>
-                                    <span><a href="#">info@emedi.com</a><br><a href="#">help@emedi.com</a></span>
+                                    <h4>Email</h4>
+                                    <span><a href="mailto: {{$data->email}}">{{$data->email}}</a></span>
+                                </div>
+                            </div>
+                        </div><br><br>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="phone">
+                                    <i class="fa fa-map-marker"></i>
+                                    <h4>Address</h4>
+                                    <span><a href="#">{{$data->address}}</a></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="message">
+                                    <i class="fa fa-globe"></i>
+                                    <h4>Website</h4>
+                                    <span><a href="{{$data->website}}">{{$data->website}}</a></span>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+
                     </div>
                 </div>
                 <!--<div class="col-lg-6">

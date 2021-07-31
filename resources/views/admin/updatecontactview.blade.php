@@ -82,8 +82,8 @@
 					            </div>
                      
 
-					        </form>
-                            @endforeach
+					      </form>
+                @endforeach
 					</div>
 					</div>
         </div>

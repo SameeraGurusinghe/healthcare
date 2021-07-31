@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Contactus;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
     }
 
     public function contact(){
-        return view ("contact");
+        $contactdata=Contactus::all();
+        return view ("contact",compact("contactdata"));
     }
 
     public function pharmacy(){
