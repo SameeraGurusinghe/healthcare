@@ -41,6 +41,8 @@ Route::get("/updateview/{id}",[AdminController::class,"updateview"]);
 
 Route::post("/finalcontactupdate/{id}",[AdminController::class,"finalcontactupdate"]);
 
+Route::get("/prescription",[HomeController::class,"prescription"]);
+Route::post("/postprescription",[HomeController::class,"postprescription"]);
 
 
 //Contact Details Save

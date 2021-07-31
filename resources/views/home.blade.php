@@ -18,7 +18,9 @@
                             <h4>E-Medi-Order</h4>
                             <h6>Trust . Convenience . Care</h6>
                             <div class="main-white-button scroll-to-section">
-                                <a href="#reservation">Upload Your Prescription</a>
+                            <a href="/prescription">Upload Your Prescription</a>
+                                
+                                
                             </div>
                         </div>
                     </div>
