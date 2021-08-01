@@ -29,7 +29,7 @@
 <div id="wrapper">
 
 <!--sidebar-wrapper-->
-@extends('layouts.sidebar')
+@extends('layouts.cusslidebar')
 
 
 <div class="content-wrapper">
@@ -46,15 +46,19 @@
           @csrf
 
             <div class="p-2">           
-                <input type="text" style="background-color:#181618;" name="cusname" class="form-control"  placeholder="Customer Name" required>
+              <input type="text" style="background-color:#181618;" name="cusname" class="form-control"  placeholder="Customer Name" required>
 			      </div>
                           
-                  <div class="p-2">           
-                <input type="text" style="background-color:#181618;" name="cusaddress" class="form-control"  placeholder="Customer Address" required>
+            <div class="p-2">           
+              <input type="text" style="background-color:#181618;" name="cusaddress" class="form-control"  placeholder="Customer Address" required>
 			      </div>
 
-                  <div class="p-2">           
-                <input type="text" style="background-color:#181618;" name="cusnic" class="form-control"  placeholder="Customer NIC" required>
+            <div class="p-2">           
+              <input type="text" style="background-color:#181618;" name="email" class="form-control"  placeholder="Customer Email" required>
+			      </div>
+
+            <div class="p-2">           
+              <input type="text" style="background-color:#181618;" name="cusnic" class="form-control"  placeholder="Customer NIC" required>
 			      </div>
 
             <div class="p-2">

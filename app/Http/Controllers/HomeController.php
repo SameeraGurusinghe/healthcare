@@ -21,7 +21,7 @@ class HomeController extends Controller
         }
 
         else{
-            return view("home");
+            return view("customer.customerhome");
         }
     }
 
@@ -53,6 +53,7 @@ class HomeController extends Controller
 
         $prescription->image=$imagename;
         $prescription->cusname=$request->cusname;
+        $prescription->email=$request->email;
         $prescription->cusaddress=$request->cusaddress;
         $prescription->cusnic=$request->cusnic;
         $prescription->cusnumber=$request->cusnumber;
