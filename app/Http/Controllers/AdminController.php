@@ -64,17 +64,4 @@ class AdminController extends Controller
         //return redirect()->back();
     }
 
-    /*
-    public function update(Request $updateRequest){
-        $contactdata = Contactus::find($id);
-
-        $contactdata->telephone=$updateRequest->phoneno;
-        $contactdata->email=$updateRequest->email;
-        $contactdata->address=$updateRequest->address;
-        $contactdata->website=$updateRequest->website;
-        $contactupdate->save();
-        return redirect()->back();
-
-    }*/
-
 }
