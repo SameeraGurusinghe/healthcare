@@ -6,7 +6,7 @@
       </li><br>
 
       <li>&nbsp;&nbsp;
-        <a href=""><span>Medicine Order</span></a>
+        <a href="\medicineorder"><span>Medicine Order</span></a>
       </li><br>
     
       <li>&nbsp;&nbsp;
