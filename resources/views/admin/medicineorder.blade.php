@@ -54,6 +54,7 @@
                 <th scope="col">CUSTOMER ADDRESS</th>
                 <th scope="col">CUSTOMER NIC</th>
                 <th scope="col">CONTACT NUMBER</th>
+                <th scope="col">EMAIL</th>
                 <th scope="col">COMMENT</th>
               </tr>
             </thead>
@@ -63,11 +64,12 @@
 
 
                 <td>{{$data->created_at}}</td>
-                <td><img src="/prescriptionimage/{{$data->image}}"></td>
+                <td><img width="150px" height="100px" src="/prescriptionimage/{{$data->image}}"></td>
                 <td>{{$data->cusname}}</td>
                 <td>{{$data->cusaddress}}</td>
                 <td>{{$data->cusnic}}</td>
                 <td>{{$data->cusnumber}}</td>
+                <td>{{$data->email}}</td>
                 <td>{{$data->commen}}</td>
               </tr>
 
