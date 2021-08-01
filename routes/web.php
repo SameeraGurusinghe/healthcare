@@ -32,6 +32,7 @@ Route::get("/redirects",[HomeController::class,"redirects"]);
 Route::get("/updatecontact",[AdminController::class,"updatecontact"]);
 
 Route::get("/updatenews",[AdminController::class,"updatenews"]);
+Route::get("/medicineorder",[AdminController::class,"medicineorderview"]);
 
 Route::post("/postnews",[AdminController::class,"postnews"]);
 

@@ -5,12 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contactus;
 use App\Models\News;
+use App\Models\Prescription;
 
 class AdminController extends Controller
 {
     public function updatecontact(){
         $contactdata=Contactus::all();
         return view("admin.updatecontact",compact("contactdata"));
+    }
+
+  
+    public function medicineorderview(){
+        $medicineorderdata=Prescription::all();
+        return view("admin.medicineorder",compact("medicineorderdata"));
     }
 
     public function updatenews(){
