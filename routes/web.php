@@ -5,6 +5,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
 
+//prevent back middleare start
+Route::group(['middleware' => 'prevent-back-history'],function(){
+
+
 //Home routes
 Route::get("/",[HomeController::class,"index"]);
 
@@ -52,3 +56,7 @@ Route::post("/sendfeedback",[CustomerController::class,"sendfeedback"]);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+//prevent back middleare end
+});
