@@ -33,6 +33,8 @@ Route::get("/updateview/{id}",[AdminController::class,"updateview"]);
 
 Route::post("/finalcontactupdate/{id}",[AdminController::class,"finalcontactupdate"]);
 
+Route::get("/orderconform/{id}",[AdminController::class,"orderconform"]);
+Route::post("/conformord",[AdminController::class,"conformord"]);
 
 //customer routes
 Route::get("/myprescription",[CustomerController::class,"myprescription"]);

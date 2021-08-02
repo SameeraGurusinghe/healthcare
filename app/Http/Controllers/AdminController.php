@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contactus;
 use App\Models\News;
-use App\Models\Prescription;
+use App\Models\Prescription; 
+use App\Models\Orderconform;
 
 class AdminController extends Controller
 {
@@ -23,6 +24,12 @@ class AdminController extends Controller
     public function updatenews(){
         return view("admin.updatenews");
     }
+
+    public function orderconform($id){
+        $data=prescription::find($id);
+        return view("admin.orderconform",compact("data"));
+    }
+
 
     //news update function
     public function postnews(Request $request){
@@ -70,5 +77,20 @@ class AdminController extends Controller
         return view("admin.updatecontact");
         //return redirect()->back();
     }
+
+        //postprescription update function
+        public function conformord(Request $request){
+            $orderconform = new Orderconform;
+
+    
+            $orderconform->email=$request->email;
+            $orderconform->cusid=$request->cusid;
+            $orderconform->tcharge=$request->tcharge;
+            $orderconform->dliverdate=$request->dliverdate;
+            $orderconform->comment=$request->comment;
+            
+            $orderconform->save();
+            return view("admin.adminhome");
+        }
 
 }
