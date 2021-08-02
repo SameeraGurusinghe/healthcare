@@ -15,7 +15,7 @@
                             <li class="scroll-to-section"><a href="/">Home</a></li>
                             <li class="scroll-to-section"><a href="/about">About</a></li>
                             <li class="scroll-to-section"><a href="/contact">Contact Us</a></li>
-                            <li class="scroll-to-section"><a href="/pharmacy">pharmacy</a></li>
+                            <li class="scroll-to-section"><a href="/news">E-Medi News</a></li>
                            	
                             <li>
                             @if (Route::has('login'))

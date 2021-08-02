@@ -51,7 +51,7 @@
 
             <div class="col-lg-4">
                 <div class="bg-light">
-                    <h4>DeliveryAddress</h4>
+                    <h4>Delivery Address</h4>
                     <span><h4>{{$data->cusaddress}}</h4></span>
                 </div>
             </div>
@@ -69,6 +69,13 @@
                 <div class="bg-light">
                     <h4>Phone Number</h4>
                     <span><h4>{{$data->cusnumber}}</h4></span>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="bg-light">
+                    <h4>Email</h4>
+                    <span><h4>{{$data->email}}</h4></span>
                 </div>
             </div>
 

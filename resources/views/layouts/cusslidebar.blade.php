@@ -13,6 +13,10 @@
         <a href="\prescription"><span>Order Now</span></a>
       </li><br>
 
+      <li>&nbsp;&nbsp;
+        <a href="\feedback"><span>Feedback</span></a>
+      </li><br>
+
     </ul>
  </div>
  <!--End sidebar-wrapper-->

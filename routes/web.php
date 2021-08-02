@@ -12,30 +12,39 @@ Route::get("/about",[HomeController::class,"about"]);
 
 Route::get("/contact",[HomeController::class,"contact"]);
 
-Route::get("/pharmacy",[HomeController::class,"pharmacy"]);
+Route::get("/news",[HomeController::class,"news"]);
 
 Route::get("/redirects",[HomeController::class,"redirects"]);
 
-Route::get("/prescription",[HomeController::class,"prescription"]);
-
-Route::post("/postprescription",[HomeController::class,"postprescription"]);
+Route::group(['middleware' => ['auth']], function() {
+    Route::get("/prescription",[HomeController::class,"prescription"]);
+});
 
 
 //Admin routes
 Route::get("/updatecontact",[AdminController::class,"updatecontact"]);
 
-Route::get("/updatenews",[AdminController::class,"updatenews"]);
-Route::get("/medicineorder",[AdminController::class,"medicineorderview"]);
+Route::post("/updatecontactdetails/{id}",[AdminController::class,"updatecontactdetails"]);
 
 Route::post("/postnews",[AdminController::class,"postnews"]);
 
-Route::get("/updateview/{id}",[AdminController::class,"updateview"]);
+Route::get("/updatenews",[AdminController::class,"updatenews"]);
 
-Route::post("/finalcontactupdate/{id}",[AdminController::class,"finalcontactupdate"]);
+Route::get("/medicineorder",[AdminController::class,"medicineorderview"]);
+
+Route::get("/customerfeedback",[AdminController::class,"customerfeedback"]);
 
 
 //customer routes
 Route::get("/myprescription",[CustomerController::class,"myprescription"]);
+
+Route::post("/postprescription",[CustomerController::class,"postprescription"]);
+
+Route::get("/feedback",[CustomerController::class,"feedback"]);
+
+Route::post("/sendfeedback",[CustomerController::class,"sendfeedback"]);
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

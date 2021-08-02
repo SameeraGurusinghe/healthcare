@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Admin Dashboard</title>
+    <title>Customer Feedbacks</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -41,34 +41,24 @@
     <div class="card">
       <div class="card-body">
         <div class="table-responsive">
-        <h4 style="text-align: center;"><b>CUSTOMER MEDICINE ORDERS</b></h4>
+        <h4 style="text-align: center;"><b>CUSTOMER FEEDBACK</b></h4>
              
           <table class="table table-sm table-hover">
             <thead>
               <tr>
                 <th scope="col">DATE</th>
-                <th scope="col">IMAGE</th>
                 <th scope="col">NAME</th>
-                <th scope="col">ADDRESS</th>
-                <th scope="col">NIC</th>
-                <th scope="col">CONTACT NUMBER</th>
                 <th scope="col">EMAIL</th>
-                <th scope="col">COMMENT</th>
+                <th scope="col">FEEDBACK</th>
               </tr>
             </thead>
-            @foreach($medicineorderdata as $data)
+            @foreach($feedback as $data)
             <tbody>
             <tr>
-
-
                 <td>{{$data->created_at}}</td>
-                <td><img width="150px" height="100px" src="/prescriptionimage/{{$data->image}}"></td>
-                <td>{{$data->cusname}}</td>
-                <td>{{$data->cusaddress}}</td>
-                <td>{{$data->cusnic}}</td>
-                <td>{{$data->cusnumber}}</td>
+                <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
-                <td>{{$data->commen}}</td>
+                <td>{{$data->description}}</td>
               </tr>
    
             </tbody>
