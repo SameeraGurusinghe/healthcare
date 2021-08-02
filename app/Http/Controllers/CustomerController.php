@@ -16,11 +16,6 @@ class CustomerController extends Controller
         return view("customer.customerprescription",compact("mydata")); 
     }
 
-
-
-   
-
-
     public function feedback(){
         return view("customer.feedback");
     }
@@ -38,10 +33,8 @@ class CustomerController extends Controller
     public function postprescription(Request $request){
         $prescription = new Prescription;
         $image = $request->image;
-
         $imagename = time().'.'.$image->getClientOriginalExtension();
         $request->image->move('prescriptionimage',$imagename);
-
         $prescription->image=$imagename;
         $prescription->cusname=$request->cusname;
         $prescription->email=$request->email;
@@ -52,5 +45,4 @@ class CustomerController extends Controller
         $prescription->save();
         return view("prescription");
     }
-
 }

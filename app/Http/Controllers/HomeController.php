@@ -22,14 +22,9 @@ class HomeController extends Controller
         }
 
         else{
-
-
-                $id = auth()->user()->email;
-                $mydata = Orderconform::where('email',$id)->orderBy('created_at','desc')->get();
-                return view("customer.customerhome",compact("mydata")); 
-            
-        
-        
+            $id = auth()->user()->email;
+            $mydata = Orderconform::where('email',$id)->orderBy('created_at','desc')->get();
+            return view("customer.customerhome",compact("mydata"));
         }
     }
 
@@ -50,5 +45,4 @@ class HomeController extends Controller
      public function prescription(){
         return view ("prescription");
     }
-
 }

@@ -14,9 +14,12 @@
                 <div class="col-lg-2">
                     <img src="assets/images/headerlogo.png">
                 </div>
+
                 <div class="col-lg-5 col-xs-12">
                     <div class="left-text-content">
-                        <p>©2021 Medicine Ordering & Healthcare Service System
+                        <p id="copyright">&copy;
+                        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                        Medicine Ordering & Healthcare Service System
                         
                         <br>Web Application Development
                         

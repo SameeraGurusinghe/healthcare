@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contactus;
 use App\Models\News;
+use App\Models\Feedback;
 use App\Models\Prescription; 
 use App\Models\Orderconform;
 
@@ -34,14 +35,12 @@ class AdminController extends Controller
         return view("admin.orderconform",compact("data"));
     }
 
-
     //news update function
     public function postnews(Request $request){
         $news = new News;
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
         $request->image->move('newsimage',$imagename);
-
         $news->image=$imagename;
         $news->title=$request->title;
         $news->description=$request->newsdesciption;
@@ -49,7 +48,7 @@ class AdminController extends Controller
         return view("admin.updatenews");
     }
 
-    //contact update
+    //contact update function
     public function updatecontactdetails(Request $updateRequest,$id){
         $contact = Contactus::find($id);
         $contact->telephone = $updateRequest->phoneno;
@@ -60,19 +59,15 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-        //postprescription update function
-        public function conformord(Request $request){
-            $orderconform = new Orderconform;
-
-    
-            $orderconform->email=$request->email;
-            $orderconform->cusid=$request->cusid;
-            $orderconform->tcharge=$request->tcharge;
-            $orderconform->dliverdate=$request->dliverdate;
-            $orderconform->comment=$request->comment;
-            
-            $orderconform->save();
-            return view("admin.adminhome");
-        }
-
+    //postprescription update function
+    public function conformord(Request $request){
+        $orderconform = new Orderconform;
+        $orderconform->email=$request->email;
+        $orderconform->cusid=$request->cusid;
+        $orderconform->tcharge=$request->tcharge;
+        $orderconform->dliverdate=$request->dliverdate;
+        $orderconform->comment=$request->comment;
+        $orderconform->save();
+        return view("admin.adminhome");
+    }
 }
