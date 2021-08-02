@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,400,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;400;700&display=swap" rel="stylesheet">
 
     <title>Customer Dashboard</title>
 
@@ -32,18 +32,72 @@
 @extends('layouts.cusslidebar')
 
 <div class="content-wrapper">
-<div class="container-fluid">
+  <div class="container-fluid">
+
+  @foreach($mydata as $data)
+
+  <br>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
 
 
-<h1>ssfffs</h1>
-<h1>ssffffs</h1>
-<h1>sss</h1>
-<h1>ssffffs</h1>
-<h1>sss</h1>
-<h1>sss</h1>
-<h1>ssfffffs</h1>
+<div class="col-lg-12 align-self-center">
+    <div class="left-text-content">
+  
 
+        <h4>Hello <b>{{$data->email}}</b>. This is your order information</h4>
+        <h4><mark>Order conformed date and time :  {{$data->created_at}}</mark></h4><br><br>
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="bg-light">
+                    <h4>Email</h4>
+                    <span><h4>{{$data->email}}</h4></span>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="bg-light">
+                    <h4>Order ID</h4>
+                    <span><h4>{{$data->cusid}}</h4></span>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="bg-light">
+                    <h4>Total Charge</h4>
+                    <span><h4>{{$data->tcharge}}</h4></span>
+                </div>
+            </div>
+        </div><br><br>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="bg-light">
+                    <h4>Delivering Date</h4>
+                    <span><h4>{{$data->dliverdate}}</h4></span>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="bg-light">
+                    <h4>Special Comment</h4>
+                    <span><h4>{{$data->comment}}</h4></span>
+                </div>
+            </div>
+
+<br><br><hr>
+
+        
+
+    </div></div></div></div></div>@endforeach
 </div></div>
+</div></div>
+
+</div>
+</div>
 
 </div>
   
@@ -70,3 +124,4 @@
     <script src="assets/js/isotope.js"></script> 
 </body>
 </html>
+

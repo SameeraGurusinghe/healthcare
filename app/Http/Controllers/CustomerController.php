@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Prescription;
 use App\Models\Feedback;
+use App\Models\Orderconform;
 use Auth;
 
 class CustomerController extends Controller
@@ -14,6 +15,11 @@ class CustomerController extends Controller
         $mydata = Prescription::where('email',$id)->orderBy('created_at','desc')->get();
         return view("customer.customerprescription",compact("mydata")); 
     }
+
+
+
+   
+
 
     public function feedback(){
         return view("customer.feedback");
