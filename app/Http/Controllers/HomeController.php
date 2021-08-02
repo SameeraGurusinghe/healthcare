@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Contactus;
 use App\Models\News;
+use App\Models\Orderconform;
 
 class HomeController extends Controller
 {
@@ -21,7 +22,14 @@ class HomeController extends Controller
         }
 
         else{
-            return view("customer.customerhome");
+
+
+                $id = auth()->user()->email;
+                $mydata = Orderconform::where('email',$id)->orderBy('created_at','desc')->get();
+                return view("customer.customerhome",compact("mydata")); 
+            
+        
+        
         }
     }
 
