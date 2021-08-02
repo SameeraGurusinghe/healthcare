@@ -42,15 +42,13 @@
 			      <div class="table-responsive">
 					  <h5 style="text-align: center;">UPDATE CONTACT INFORMATION</h5><br>
 
-                  <form action="" method="post">
+            @foreach($contactdata as $data)
+                  <form action="{{url('/updatecontactdetails',$data->id)}}" method="post">
                     {{csrf_field()}}
-
-                    @foreach($contactdata as $data)
 
                       <div class="form-group row">
                         <label class="col-lg-2 col-form-label form-control-label">Telephone</label>
                           <div class="col-lg-10 text-center">
-                            
                             <input class="form-control" style="background-color:#181618;"  type="text" value="{{$data->telephone}}" name="phoneno">
                           </div>
                       </div><br>
@@ -77,7 +75,8 @@
                       </div><br>
 
 					            <div class="p-2">
-					              <a href="{{url('/updateview',$data->id)}}" class="btn btn-success btn-sm" style="width: 80px; float: right;">UPDATE</a>
+					              <!--<a href="{{url('/updateview',$data->id)}}" class="btn btn-success btn-sm" style="width: 80px; float: right;">UPDATE</a>-->
+                        <button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;">UPDATE</button>
                         <button type="reset" class="btn btn-warning btn-sm" style="width: 80px; float: right;">RESET</button>
 					            </div>
                       @endforeach

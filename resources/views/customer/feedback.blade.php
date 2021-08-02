@@ -2,7 +2,6 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Admin Dashboard</title>
+    <title>Feedback</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -29,61 +28,47 @@
 <div id="wrapper">
 
 <!--sidebar-wrapper-->
-@extends('layouts.sidebar')
+@extends('layouts.cusslidebar')
+
 
 <div class="content-wrapper">
-<div class="container-fluid">
+  <div class="container-fluid">
 
+    <!--News area start-->
+   <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 style="text-align: center;"><b>SEND YOUR FEEDBACK. IT WILL HELP TO IMPROVE OUR SERVICES.</b></h4>
+				
+          <form action="{{url('/sendfeedback')}}" method="POST">
+          @csrf
 
-<!--Feedback table area start-->
-<div class="row">
-  <div class="col-lg-12">
-    <div class="card">
-      <div class="card-body">
-        <div class="table-responsive">
-        <h4 style="text-align: center;"><b>CUSTOMER MEDICINE ORDERS</b></h4>
-             
-          <table class="table table-sm table-hover">
-            <thead>
-              <tr>
-                <th scope="col">DATE</th>
-                <th scope="col">IMAGE</th>
-                <th scope="col">NAME</th>
-                <th scope="col">ADDRESS</th>
-                <th scope="col">NIC</th>
-                <th scope="col">CONTACT NUMBER</th>
-                <th scope="col">EMAIL</th>
-                <th scope="col">ACTION</th>
-                <th scope="col">COMMENT</th>
+            <div class="p-2">           
+                <input type="text" style="background-color:#181618;" name="name" class="form-control"  placeholder="Enter Your Name" required>
+			</div>
+                          
+            <div class="p-2">
+                <input type="email" style="background-color:#181618;" name="email" class="form-control" placeholder="Enter Your Email" required>
+            </div>
 
-              </tr>
-            </thead>
-            @foreach($medicineorderdata as $data)
-            <tbody>
-            <tr>
+            <div class="p-2">
+                <textarea type="text" style="background-color:#181618;" name="description" class="form-control" placeholder="Express Your Idea" required></textarea>
+            </div>
+					
+			<div class="p-2">
+                <button type="submit" class="btn btn-success btn-sm" style="float: right;">SEND FEEDBACK</button>
+				<button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>								    
+            </div>
+          
+            </form>
 
-
-                <td>{{$data->created_at}}</td>
-                <td><img width="100px" height="50px" src="/prescriptionimage/{{$data->image}}"></td>
-                <td>{{$data->cusname}}</td>
-                <td>{{$data->cusaddress}}</td>
-                <td>{{$data->cusnic}}</td>
-                <td>{{$data->cusnumber}}</td>
-                <td>{{$data->email}}</td>
-                <td><button type="button" class="btn btn-outline-warning"><a href="{{url('/orderconform',$data->id)}}">Conform</a></button></td>
-                <td>{{$data->commen}}</td>
-              </tr>
-   
-            </tbody>
-            @endforeach
-          </table>
-         
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!--Feedback table area end-->
+	</div><BR><BR><BR>    
+<!--News area END-->
+
 </div></div>
 
 </div>
