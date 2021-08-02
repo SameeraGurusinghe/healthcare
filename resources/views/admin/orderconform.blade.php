@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-
+  <base href="/public">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Admin Dashboard</title>
+    <title>Post a news</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -31,59 +31,57 @@
 <!--sidebar-wrapper-->
 @extends('layouts.sidebar')
 
+
 <div class="content-wrapper">
-<div class="container-fluid">
+  <div class="container-fluid">
 
+    <!--News area start-->
+   <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 style="text-align: center;"><b>ORDER CONFORMATION</b></h4>
 
-<!--Feedback table area start-->
-<div class="row">
-  <div class="col-lg-12">
-    <div class="card">
-      <div class="card-body">
-        <div class="table-responsive">
-        <h4 style="text-align: center;"><b>CUSTOMER MEDICINE ORDERS</b></h4>
-             
-          <table class="table table-sm table-hover">
-            <thead>
-              <tr>
-                <th scope="col">DATE</th>
-                <th scope="col">IMAGE</th>
-                <th scope="col">NAME</th>
-                <th scope="col">ADDRESS</th>
-                <th scope="col">NIC</th>
-                <th scope="col">CONTACT NUMBER</th>
-                <th scope="col">EMAIL</th>
-                <th scope="col">ACTION</th>
-                <th scope="col">COMMENT</th>
-
-              </tr>
-            </thead>
-            @foreach($medicineorderdata as $data)
-            <tbody>
-            <tr>
-
-
-                <td>{{$data->created_at}}</td>
-                <td><img width="100px" height="50px" src="/prescriptionimage/{{$data->image}}"></td>
-                <td>{{$data->cusname}}</td>
-                <td>{{$data->cusaddress}}</td>
-                <td>{{$data->cusnic}}</td>
-                <td>{{$data->cusnumber}}</td>
-                <td>{{$data->email}}</td>
-                <td><button type="button" class="btn btn-outline-warning"><a href="{{url('/orderconform',$data->id)}}">Conform</a></button></td>
-                <td>{{$data->commen}}</td>
-              </tr>
-   
-            </tbody>
-            @endforeach
-          </table>
          
+
+          <form action="{{url('/conformord')}}" method="POST" enctype="multipart/form-data">
+          @csrf
+
+                <div class="p-2">           
+                <input type="text" style="background-color:#181618;" name="email" class="form-control"  value="{{$data->email}}" required>
+			      </div>
+                  <div class="p-2">           
+                <input type="text" style="background-color:#181618;" name="cusid" class="form-control"  value="{{$data->id}}" required>
+			      </div>
+
+                  <div class="p-2">           
+                <input type="text" style="background-color:#181618;" name="tcharge" class="form-control"  placeholder="Total Charge" required>
+			      </div>
+                        
+                  
+                  <div class="p-2">           
+                <input type="text" style="background-color:#181618;" name="dliverdate" class="form-control"  placeholder="Deliver Date" required>
+			      </div>
+
+
+            <div class="p-2">           
+                <textarea type="text" style="background-color:#181618;" name="comment" class="form-control" placeholder="comment" ></textarea>
+			      </div>
+									
+			      <div class="p-2">
+            <!--<button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;" name="addnews">PUBLISH</button>-->
+				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">PUBLISH</button>
+				    <button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>									    
+            </div>
+          
+            </form>
+            
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!--Feedback table area end-->
+	</div><BR><BR><BR>    
+<!--News area END-->
+
 </div></div>
 
 </div>
