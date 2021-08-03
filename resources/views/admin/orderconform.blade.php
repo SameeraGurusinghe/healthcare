@@ -59,9 +59,16 @@
 			      </div>
                         
                   
-                  <div class="p-2">           
-                <input type="text" style="background-color:#181618;" name="dliverdate" class="form-control"  placeholder="Deliver Date" required>
-			      </div>
+            <div class="p-2">
+            Resreving Time Period OR Out of Stouck 
+  <select class="form-select form-select-sm" style="background-color:#0a0101;" name="dliverdate" aria-label=".form-select-sm example">
+  <option selected style="background-color:#0a0101;">Resreving Time Period </option>
+  <option style="background-color:#0a0101;" value="Out Of Stouck">Out Of Stouck</option>
+  <option style="background-color:#0a0101;" value="1">One</option>
+  <option style="background-color:#0a0101;" value="2">Two</option>
+  <option style="background-color:#0a0101;" value="3">Three</option>
+</select>          
+        </div>
 
 
             <div class="p-2">           
