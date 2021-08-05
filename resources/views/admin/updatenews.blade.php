@@ -42,23 +42,28 @@
         <div class="card-body">
           <h4 style="text-align: center;"><b>POST A NEWS</b></h4>
 				
+          @foreach($errors->all() as $error)
+          <div class="alert alert-danger" role="alert">
+            {{$error}}
+          </div>
+          @endforeach
+
           <form action="{{url('/postnews')}}" method="POST" enctype="multipart/form-data">
           @csrf
 
             <div class="p-2">           
-                <input type="text" style="background-color:#181618;" name="title" class="form-control"  placeholder="News Title" required>
+                <input type="text" style="background-color:#181618;" name="title" class="form-control"  placeholder="News Title">
 			      </div>
                           
             <div class="p-2">
-                <textarea type="text" style="background-color:#181618;" name="newsdesciption" class="form-control" placeholder="News Description" required></textarea>
+                <textarea type="text" style="background-color:#181618;" name="newsdesciption" class="form-control" placeholder="News Description"></textarea>
             </div>
 
             <div class="p-2">           
-                <input type="file" style="background-color:#181618;" name="image" class="form-control" placeholder="Image" required>
+                <input type="file" style="background-color:#181618;" name="image" class="form-control" placeholder="Image">
 			      </div>
 									
 			      <div class="p-2">
-            <!--<button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;" name="addnews">PUBLISH</button>-->
 				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">PUBLISH</button>
 				    <button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>									    
             </div>

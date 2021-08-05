@@ -42,7 +42,13 @@
 			      <div class="table-responsive">
 					  <h5 style="text-align: center;">UPDATE CONTACT INFORMATION</h5><br>
 
-            @foreach($contactdata as $data)
+            @foreach($errors->all() as $error)
+            <div class="alert alert-danger" role="alert">
+            {{$error}}
+            </div>
+            @endforeach
+
+                @foreach($contactdata as $data)
                   <form action="{{url('/updatecontactdetails',$data->id)}}" method="post">
                     {{csrf_field()}}
 

@@ -2,7 +2,7 @@
 <div id="sidebar-wrapper" data-simplebar-auto-hide="true">
     <ul class="sidebar-menu do-nicescrol"><br><br>
       <li>&nbsp;&nbsp;
-        <a href="\redirects"><span>Dashboard</span></a>
+        <a href="\redirects"><span>Confirmation</span></a>
       </li><br>
 
       <li>&nbsp;&nbsp;

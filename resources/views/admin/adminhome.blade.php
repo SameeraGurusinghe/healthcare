@@ -35,13 +35,7 @@
 <div class="container-fluid">
 
 
-<h1>sss</h1>
-<h1>sss</h1>
-<h1>sss</h1>
-<h1>sss</h1>
-<h1>sss</h1>
-<h1>sss</h1>
-<h1>sss</h1>
+<h1 style="height:200px;">Admin Home</h1>
 
 </div></div>
 

@@ -22,6 +22,13 @@ class CustomerController extends Controller
 
     public function sendfeedback(Request $request){
         $feedback = new Feedback;
+
+        $this->validate($request,[
+            'name'=>'required|max:50|min:4',
+            'email'=>'required|email',
+            'description'=>'required|max:250|min:20',
+            ]);
+
         $feedback->name=$request->name;
         $feedback->email=$request->email;
         $feedback->description=$request->description;
@@ -32,6 +39,17 @@ class CustomerController extends Controller
     //postprescription update function
     public function postprescription(Request $request){
         $prescription = new Prescription;
+
+        $this->validate($request,[
+            'imagename'=>'required',
+            'cusname'=>'required|max:50|min:4',
+            'email'=>'required|email',
+            'cusaddress'=>'required|max:250|min:5',
+            'cusnic'=>'required|max:10|min:10',
+            'cusnumber'=>'required|max:10|min:10',
+            'comment'=>'required|max:250|min:20',
+            ]);
+
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
         $request->image->move('prescriptionimage',$imagename);

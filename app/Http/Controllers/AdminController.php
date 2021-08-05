@@ -38,6 +38,13 @@ class AdminController extends Controller
     //news update function
     public function postnews(Request $request){
         $news = new News;
+
+    $this->validate($request,[
+        'title'=>'required|max:50|min:4',
+        'newsdesciption'=>'required|max:250|min:20',
+        'imagename'=>'required',
+        ]);
+
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
         $request->image->move('newsimage',$imagename);
@@ -51,6 +58,14 @@ class AdminController extends Controller
     //contact update function
     public function updatecontactdetails(Request $updateRequest,$id){
         $contact = Contactus::find($id);
+  
+        $this->validate($updateRequest,[
+            'phoneno'=>'required|min:10|numeric',
+            'email'=>'required|email',
+            'address'=>'required|max:250|min:10',
+            'website'=>'required|url',
+            ]);
+
         $contact->telephone = $updateRequest->phoneno;
         $contact->email = $updateRequest->email;
         $contact->address = $updateRequest->address;

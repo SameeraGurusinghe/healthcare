@@ -41,19 +41,25 @@
         <div class="card-body">
           <h4 style="text-align: center;"><b>SEND YOUR FEEDBACK. IT WILL HELP TO IMPROVE OUR SERVICES.</b></h4>
 				
+          @foreach($errors->all() as $error)
+          <div class="alert alert-danger" role="alert">
+            {{$error}}
+          </div>
+          @endforeach
+
           <form action="{{url('/sendfeedback')}}" method="POST">
           @csrf
 
             <div class="p-2">           
-                <input type="text" style="background-color:#181618;" name="name" class="form-control"  placeholder="Enter Your Name" required>
+                <input type="text" style="background-color:#181618;" name="name" class="form-control"  placeholder="Enter Your Name">
 			</div>
                           
             <div class="p-2">
-                <input type="email" style="background-color:#181618;" name="email" class="form-control" placeholder="Enter Your Email" required>
+                <input type="email" style="background-color:#181618;" name="email" class="form-control" placeholder="Enter Your Email">
             </div>
 
             <div class="p-2">
-                <textarea type="text" style="background-color:#181618;" name="description" class="form-control" placeholder="Express Your Idea" required></textarea>
+                <textarea type="text" style="background-color:#181618;" name="description" class="form-control" placeholder="Express Your Idea"></textarea>
             </div>
 					
 			<div class="p-2">

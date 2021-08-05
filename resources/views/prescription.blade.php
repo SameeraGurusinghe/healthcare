@@ -40,42 +40,49 @@
     <div class="col-lg-12">
       <div class="card">
         <div class="card-body">
-          <h4 style="text-align: center;"><b>Upload prescription Details</b></h4>
+          <h4 style="text-align: center;"><b>Submit Prescription Details</b></h4>
 				
+
+          @foreach($errors->all() as $error)
+          <div class="alert alert-danger" role="alert">
+            {{$error}}
+          </div>
+          @endforeach
+
           <form action="{{url('/postprescription')}}" method="POST" enctype="multipart/form-data">
           @csrf
 
             <div class="p-2">           
-              <input type="text" style="background-color:#181618;" name="cusname" class="form-control"  placeholder="Customer Name" required>
+              <input type="text" style="background-color:#181618;" name="cusname" class="form-control"  placeholder="Full Name">
 			      </div>
                           
             <div class="p-2">           
-              <input type="text" style="background-color:#181618;" name="cusaddress" class="form-control"  placeholder="Customer Address" required>
+              <input type="text" style="background-color:#181618;" name="cusaddress" class="form-control"  placeholder="Address">
 			      </div>
 
             <div class="p-2">           
-              <input type="text" style="background-color:#181618;" name="email" class="form-control"  placeholder="Customer Email" required>
+              <input type="text" style="background-color:#181618;" name="email" class="form-control"  placeholder="Email">
 			      </div>
 
             <div class="p-2">           
-              <input type="text" style="background-color:#181618;" name="cusnic" class="form-control"  placeholder="Customer NIC" required>
+              <input type="text" style="background-color:#181618;" name="cusnic" class="form-control"  placeholder="NIC">
 			      </div>
 
             <div class="p-2">
-                <input type="text" style="background-color:#181618;" name="cusnumber" class="form-control" placeholder="Contact Number" required>
+                <input type="text" style="background-color:#181618;" name="cusnumber" class="form-control" placeholder="Contact Number">
             </div>
 
             <div class="p-2">
-                <textarea type="text" style="background-color:#181618;" name="comment" class="form-control" placeholder="Comment" required></textarea>
+                <textarea type="text" style="background-color:#181618;" name="comment" class="form-control" placeholder="Comment"></textarea>
             </div>
 
             <div class="p-2">           
-                <input type="file" style="background-color:#181618;" name="image" class="form-control" placeholder="Your prescription" required>
+                <input type="file" style="background-color:#181618;" name="image" class="form-control" placeholder="Prescription Image">
 			      </div>
 									
 			      <div class="p-2">
             <!--<button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;" name="addnews">PUBLISH</button>-->
-				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">PUBLISH</button>
+				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">REQUEST</button>
 				    <button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>									    
             </div>
           

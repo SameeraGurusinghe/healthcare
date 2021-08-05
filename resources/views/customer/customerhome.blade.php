@@ -32,24 +32,28 @@
 @extends('layouts.cusslidebar')
 
 <div class="content-wrapper">
-  <div class="container-fluid">
+<div class="container-fluid">
 
-  @foreach($mydata as $data)
+@foreach($mydata as $data)
 
-  <br>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="card">
-        <div class="card-body">
-
+<br>
+<div class="row">
+<div class="col-lg-12">
+<div class="card">
+<div class="card-body">
 
 <div class="col-lg-12 align-self-center">
-    <div class="left-text-content">
+<div class="left-text-content">
   
+        <h4>Order status information</h4>
+        <h4><mark>Order status send date and time :  {{$data->created_at}}</mark></h4><br><br>
 
-        <h4>Hello <b>{{$data->email}}</b>. This is your order information</h4>
-        <h4><mark>Order conformed date and time :  {{$data->created_at}}</mark></h4><br><br>
-        
+        @if($data->dliverdate == 'e')
+        <div class="alert alert-danger" role="alert">We are sorry ! <br> The medicine that you have ordered, goes to out of stock.</div>
+        @endif
+
+        @if($data->dliverdate != 'e')
+        <div class="alert alert-success" role="alert">Wow ! <br> Your medicine order is now on the way.</div>
         <div class="row">
             <div class="col-lg-4">
                 <div class="bg-light">
@@ -87,18 +91,14 @@
                     <span><h4>{{$data->comment}}</h4></span>
                 </div>
             </div>
+        </div>
+        @endif
 
-<br><br><hr>
-
-        
-
-    </div></div></div></div></div>@endforeach
-</div></div>
-</div></div>
+</div></div></div></div></div></div>
+@endforeach
 
 </div>
 </div>
-
 </div>
   
 <!--footer-->

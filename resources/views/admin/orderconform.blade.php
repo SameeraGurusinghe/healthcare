@@ -42,42 +42,38 @@
         <div class="card-body">
           <h4 style="text-align: center;"><b>ORDER CONFORMATION</b></h4>
 
-         
-
           <form action="{{url('/conformord')}}" method="POST" enctype="multipart/form-data">
           @csrf
 
-                <div class="p-2">           
+            <div class="p-2">           
                 <input type="text" style="background-color:#181618;" name="email" class="form-control"  value="{{$data->email}}" required>
 			      </div>
-                  <div class="p-2">           
+
+            <div class="p-2">           
                 <input type="text" style="background-color:#181618;" name="cusid" class="form-control"  value="{{$data->id}}" required>
 			      </div>
 
-                  <div class="p-2">           
+            <div class="p-2">           
                 <input type="text" style="background-color:#181618;" name="tcharge" class="form-control"  placeholder="Total Charge" required>
 			      </div>
-                        
-                  
+                           
             <div class="p-2">
-            Resreving Time Period OR Out of Stouck 
-  <select class="form-select form-select-sm" style="background-color:#0a0101;" name="dliverdate" aria-label=".form-select-sm example">
-  <option selected style="background-color:#0a0101;">Resreving Time Period </option>
-  <option style="background-color:#0a0101;" value="Out Of Stouck">Out Of Stouck</option>
-  <option style="background-color:#0a0101;" value="1">One</option>
-  <option style="background-color:#0a0101;" value="2">Two</option>
-  <option style="background-color:#0a0101;" value="3">Three</option>
-</select>          
-        </div>
-
+              Resreving Time Period OR Out of Stock 
+              <select class="form-select form-select-sm" style="background-color:#0a0101;" name="dliverdate" aria-label=".form-select-sm example">
+                <option selected style="background-color:#0a0101;">Resreving Time Period</option>
+                <option style="background-color:#0a0101;" value="e">Out Of Stock</option>
+                <option style="background-color:#0a0101;" value="1">One</option>
+                <option style="background-color:#0a0101;" value="2">Two</option>
+                <option style="background-color:#0a0101;" value="3">Three</option>
+              </select>          
+            </div>
 
             <div class="p-2">           
                 <textarea type="text" style="background-color:#181618;" name="comment" class="form-control" placeholder="comment" ></textarea>
 			      </div>
 									
 			      <div class="p-2">
-            <!--<button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;" name="addnews">PUBLISH</button>-->
-				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">PUBLISH</button>
+				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">Confirm order</button>
 				    <button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>									    
             </div>
           
