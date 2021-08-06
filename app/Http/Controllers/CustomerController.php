@@ -23,11 +23,11 @@ class CustomerController extends Controller
     public function sendfeedback(Request $request){
         $feedback = new Feedback;
 
-        $this->validate($request,[
-            'name'=>'required|max:50|min:4',
-            'email'=>'required|email',
-            'description'=>'required|max:250|min:20',
-            ]);
+    $this->validate($request,[
+        'name'=>'required|max:50|min:4',
+        'email'=>'required|email',
+        'description'=>'required|max:250|min:20',
+        ]);
 
         $feedback->name=$request->name;
         $feedback->email=$request->email;
@@ -40,15 +40,15 @@ class CustomerController extends Controller
     public function postprescription(Request $request){
         $prescription = new Prescription;
 
-        $this->validate($request,[
-            'imagename'=>'required',
-            'cusname'=>'required|max:50|min:4',
-            'email'=>'required|email',
-            'cusaddress'=>'required|max:250|min:5',
-            'cusnic'=>'required|max:10|min:10',
-            'cusnumber'=>'required|max:10|min:10',
-            'comment'=>'required|max:250|min:20',
-            ]);
+    $this->validate($request,[
+        'cusname'=>'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
+        'email'=>'required|email',
+        'cusaddress'=>'required|max:250|min:5',
+        'cusnic'=>'required|max:10|min:10',
+        'cusnumber'=>'required|max:10|min:10',
+        'comment'=>'required|max:250|min:20',
+        'image'=>'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();

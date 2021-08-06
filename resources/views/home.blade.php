@@ -2,6 +2,7 @@
 @extends('layouts.mainlibrariesup')
 <!-- ***** Header and library Area End ***** -->
 <title>Home</title>
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/titlelogo.png"/>
 
 <body>
 @extends('layouts.header')

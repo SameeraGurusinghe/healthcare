@@ -42,7 +42,7 @@ class AdminController extends Controller
     $this->validate($request,[
         'title'=>'required|max:50|min:4',
         'newsdesciption'=>'required|max:250|min:20',
-        'imagename'=>'required',
+        'image'=>'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $image = $request->image;
@@ -59,12 +59,12 @@ class AdminController extends Controller
     public function updatecontactdetails(Request $updateRequest,$id){
         $contact = Contactus::find($id);
   
-        $this->validate($updateRequest,[
-            'phoneno'=>'required|min:10|numeric',
-            'email'=>'required|email',
-            'address'=>'required|max:250|min:10',
-            'website'=>'required|url',
-            ]);
+    $this->validate($updateRequest,[
+        'phoneno'=>'required|min:10|numeric',
+        'email'=>'required|email',
+        'address'=>'required|max:250|min:10',
+        'website'=>'required|url',
+        ]);
 
         $contact->telephone = $updateRequest->phoneno;
         $contact->email = $updateRequest->email;

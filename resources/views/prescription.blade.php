@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <title>Upload prescription</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/titlelogo.png"/>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -82,7 +83,7 @@
 									
 			      <div class="p-2">
             <!--<button type="submit" class="btn btn-success btn-sm" style="width: 80px; float: right;" name="addnews">PUBLISH</button>-->
-				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">REQUEST</button>
+				    <button type="submit" class="btn btn-success btn-sm" style="float: right;">SUBMIT</button>
 				    <button type="reset" class="btn btn-warning btn-sm" style="float: right;">CLEAR</button>									    
             </div>
           

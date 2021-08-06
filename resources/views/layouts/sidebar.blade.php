@@ -14,11 +14,11 @@
       </li><br>
     
       <li>&nbsp;&nbsp;
-        <a href="\updatenews"><span>Send a News</span></a>
+        <a href="\updatenews"><span>Post a News</span></a>
       </li><br>
 
       <li>&nbsp;&nbsp;
-        <a href="\updatecontact"><span>Contact Info</span></a>
+        <a href="\updatecontact"><span>Update Contact Info</span></a>
       </li><br>
 
     </ul>

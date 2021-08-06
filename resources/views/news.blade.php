@@ -1,7 +1,8 @@
 <!-- ***** Header and library Area Start ***** -->
 @extends('layouts.mainlibrariesup')
 <!-- ***** Header and library Area End ***** -->
-<title>Pharmacy</title>
+<title>News</title>
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/titlelogo.png"/>
 
 <body>
 @extends('layouts.header')
