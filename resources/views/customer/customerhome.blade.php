@@ -50,49 +50,20 @@
         <h4><mark>Order status send date and time :  {{$data->created_at}}</mark></h4><br><br>
 
         @if($data->dliverdate == 'e')
-        <div class="alert alert-danger" role="alert">We are sorry ! <br> The medicine that you have ordered, goes to out of stock.</div>
+        <div class="alert alert-danger" role="alert"><i class="fa fa-times p-2 bg-dark"></i><br>We are sorry ! <br> The medicine that you have ordered, was out of stock.</div>
         @endif
 
         @if($data->dliverdate != 'e')
-        <div class="alert alert-success" role="alert">Wow ! <br> Your medicine order is now on the way.</div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Email</h4>
-                    <span><h4>{{$data->email}}</h4></span>
+        <div class="alert alert-success" role="alert"><i class="fa fa-check-square p-2 bg-dark"></i><br>Success ! <br> Your medicine order is now on the way.</div>
+            <div class="col-lg-12">
+                <div class="">
+                    <h4 class="text-dark">Email: <span class="text-white">{{$data->email}}</span></h4>
+                    <h4 class="text-dark">Order ID: <span class="text-white">{{$data->cusid}}</span></h4>
+                    <h4 class="text-dark">Total Charge: <span class="text-white">Rs.{{$data->tcharge}}/=</span></h4>
+                    <h4 class="text-dark">Delivering Date: <span class="text-white">within {{$data->dliverdate}} day(s)</span></h4>
+                    <h4 class="text-dark">Special Comment: <span class="text-white">{{$data->comment}}</span></h4>
                 </div>
             </div>
-
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Order ID</h4>
-                    <span><h4>{{$data->cusid}}</h4></span>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Total Charge</h4>
-                    <span><h4>{{$data->tcharge}}</h4></span>
-                </div>
-            </div>
-        </div><br><br>
-
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Delivering Date</h4>
-                    <span><h4>{{$data->dliverdate}}</h4></span>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Special Comment</h4>
-                    <span><h4>{{$data->comment}}</h4></span>
-                </div>
-            </div>
-        </div>
         @endif
 
 </div></div></div></div></div></div>

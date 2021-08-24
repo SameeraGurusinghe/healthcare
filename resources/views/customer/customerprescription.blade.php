@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,400,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;400;700&display=swap" rel="stylesheet">
 
-    <title>Customer Dashboard</title>
+    <title>Order Details</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/titlelogo.png"/>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -43,56 +43,15 @@
         <h4><mark>Ordered date and time :  {{$data->created_at}}</mark></h4><br><br>
         
         <div class="row">
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>My Name</h4>
-                    <span><h4>{{$data->cusname}}</h4></span>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Delivery Address</h4>
-                    <span><h4>{{$data->cusaddress}}</h4></span>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>NIC</h4>
-                    <span><h4>{{$data->cusnic}}</h4></span>
-                </div>
-            </div>
-        </div><br><br>
-
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Phone Number</h4>
-                    <span><h4>{{$data->cusnumber}}</h4></span>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Email</h4>
-                    <span><h4>{{$data->email}}</h4></span>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>Special Comment</h4>
-                    <span><h4>{{$data->commen}}</h4></span>
-                </div>
-            </div>
-        </div><br><br>
-
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="bg-light">
-                    <h4>My Perscription</h4>
-                    <span><img src="/prescriptionimage/{{$data->image}}"></span>
+            <div class="col-lg-12">
+                <div class="">
+                    <h4>Name: <span class="text-dark">{{$data->cusname}}</span></h4>
+                    <h4>Delivery Address: <span class="text-dark">{{$data->cusaddress}}</span></h4>
+                    <h4>NIC: <span class="text-dark">{{$data->cusnic}}</span></h4>
+                    <h4>Phone Number: <span class="text-dark">{{$data->cusnumber}}</span></h4>
+                    <h4>Email: <span class="text-dark">{{$data->email}}</span></h4>
+                    <h4>Special Comment: <span class="text-dark">{{$data->commen}}</span></h4>
+                    <h4>My Perscription: <span><img src="/prescriptionimage/{{$data->image}}"></span></h4>
                 </div>
             </div>
         </div><br><br><hr>

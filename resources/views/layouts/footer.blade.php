@@ -21,7 +21,9 @@
                         <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
                         Medicine Ordering & Healthcare Service System
                         
-                        <br>Web Application Development
+                        <br>Web Application Development - II
+
+                        <br>CST 329-2
                         
                         <br>Group Project</p>
                     </div>

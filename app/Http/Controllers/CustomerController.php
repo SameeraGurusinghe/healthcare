@@ -36,12 +36,12 @@ class CustomerController extends Controller
         return view("customer.feedback");
     }
 
-    //postprescription update function
+    //postprescription upload function
     public function postprescription(Request $request){
         $prescription = new Prescription;
 
     $this->validate($request,[
-        'cusname'=>'required|string|max:255|regex:/(^([a-zA-Z]+)(\d+)?$)/u',
+        'cusname'=>'required|string|max:255|regex:/(^([a-z A-Z]+)(\d+)?$)/u',
         'email'=>'required|email',
         'cusaddress'=>'required|max:250|min:5',
         'cusnic'=>'required|max:10|min:10',
