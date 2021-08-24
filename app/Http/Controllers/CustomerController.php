@@ -46,7 +46,7 @@ class CustomerController extends Controller
         'cusaddress'=>'required|max:250|min:5',
         'cusnic'=>'required|max:10|min:10',
         'cusnumber'=>'required|max:10|min:10',
-        'comment'=>'required|max:250|min:20',
+        //'comment'=>'max:250|min:20',
         'image'=>'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 

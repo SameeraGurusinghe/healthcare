@@ -47,6 +47,7 @@
           <table class="table table-sm table-hover">
             <thead>
               <tr>
+                <th scope="col">ACTION</th>
                 <th scope="col">DATE</th>
                 <th scope="col">IMAGE</th>
                 <th scope="col">NAME</th>
@@ -54,7 +55,6 @@
                 <th scope="col">NIC</th>
                 <th scope="col">CONTACT NUMBER</th>
                 <th scope="col">EMAIL</th>
-                <th scope="col">ACTION</th>
                 <th scope="col">COMMENT</th>
 
               </tr>
@@ -63,7 +63,7 @@
             <tbody>
             <tr>
 
-
+                <td><button type="button" class="btn btn-outline-warning"><a href="{{url('/orderconform',$data->id)}}">Conform</a></button></td>
                 <td>{{$data->created_at}}</td>
                 <td><img width="100px" height="50px" src="/prescriptionimage/{{$data->image}}"></td>
                 <td>{{$data->cusname}}</td>
@@ -71,7 +71,6 @@
                 <td>{{$data->cusnic}}</td>
                 <td>{{$data->cusnumber}}</td>
                 <td>{{$data->email}}</td>
-                <td><button type="button" class="btn btn-outline-warning"><a href="{{url('/orderconform',$data->id)}}">Conform</a></button></td>
                 <td>{{$data->commen}}</td>
               </tr>
    
